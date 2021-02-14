@@ -1,6 +1,15 @@
 <!doctype html>
 <?php
 session_start();
+// Uses session variable to make sure user is logged in properly
+if( !isset($_SESSION['logged']) ) {
+    // User header to force user to index to log in if this variable isn't set
+    header("Location: index.php");
+}
+// Session variable logged must be a particular value
+if( $_SESSION['logged'] != 1 ) {
+    header("Location: index.php");
+}
 ?>
 <html lang="en">
     <head>
@@ -30,16 +39,8 @@ session_start();
             <img class="babyLogo" src="images/baby-brewing-2.gif">
         </div>
         <div class="col-sm text-center my-auto">
-            <h1>A baby boy is brewing!</h1>
-            <form id="form_id" role="form" method"POST" name="formName">
-                <div class="mb-3">
-                    <label for="passwordTitle" class="accFancyForm form-label">Secret password:</label>
-                    <input type="password" class="form-control" id="password_id" name="password">
-                    <div id="result" class="form-text">This is the password mailed to you with your invitation.</div>
-                </div>
-                <button type="submit" id="buttonSubmit" 
-                    class="submitBtn btn btn-primary">Submit</button>
-            </form>
+            <h1>Test Schedule</h1>
+            <p>test schedule to check if the user has logged in.</p>
         </div>
     </div>
 </div>
