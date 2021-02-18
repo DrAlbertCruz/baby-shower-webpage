@@ -9,7 +9,7 @@ $(document).ready(function(){
         $.post("checkPass.php", formValues, function(data){
             // Display the returned data in browser
             console.log( data );
-            $("#result").html(data);
+            setTimeout(function(){ window.location = 'sched.php'; }, 1000 );
         });
     });
 });

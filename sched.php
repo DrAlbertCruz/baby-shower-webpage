@@ -1,15 +1,6 @@
 <!doctype html>
 <?php
 session_start();
-// Uses session variable to make sure user is logged in properly
-if( !isset($_SESSION['logged']) ) {
-    // User header to force user to index to log in if this variable isn't set
-    header("Location: index.php");
-}
-// Session variable logged must be a particular value
-if( $_SESSION['logged'] != 1 ) {
-    header("Location: index.php");
-}
 ?>
 <html lang="en">
     <head>
@@ -44,6 +35,14 @@ if( $_SESSION['logged'] != 1 ) {
         </div>
     </div>
 </div>
+
+<?php
+echo '<pre>';
+echo session_id();
+var_dump( $_SESSION );
+echo '</pre>';
+?>
+
 </body>    
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 

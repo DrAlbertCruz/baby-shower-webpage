@@ -14,7 +14,7 @@ if( !isset( $_POST['password'] ) ) {
 $password = $_POST['password'];
 if( strcmp( $password, $passcode ) == 0 ) {
     $_SESSION['logged'] = 1;
-    echo 1;
+    echo var_dump($_SESSION);
 }
 else {
     echo 2;
