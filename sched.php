@@ -1,10 +1,11 @@
 <!doctype html>
 <?php
 session_start();
-if( isset( $_SESSION['logged'] ) ) {
-    if( $_SESSION['logged'] == 1 ) {
-        header( 'Location: sched.php' );
-    }
+if( !isset( $_SESSION['logged'] ) ) {
+    header( 'Location: index.php' );
+}
+if( $_SESSION['logged'] != 1 ) {
+    header( 'Location: index.php' );
 }
 ?>
 <html lang="en">
@@ -35,16 +36,8 @@ if( isset( $_SESSION['logged'] ) ) {
             <img class="babyLogo" src="images/baby-brewing-2.gif">
         </div>
         <div class="col-sm text-center my-auto">
-            <h1>A baby boy is brewing!</h1>
-            <form id="form_id" role="form" method"POST" name="formName">
-                <div class="mb-3">
-                    <label for="passwordTitle" class="accFancyForm form-label">Secret password:</label>
-                    <input type="password" class="form-control" id="password_id" name="password">
-                    <div id="result" class="form-text">This is the password mailed to you with your invitation.</div>
-                </div>
-                <button type="submit" id="buttonSubmit" 
-                    class="submitBtn btn btn-primary">Submit</button>
-            </form>
+            <h1>Test Schedule</h1>
+            <p>test schedule to check if the user has logged in.</p>
         </div>
     </div>
 </div>
@@ -52,7 +45,7 @@ if( isset( $_SESSION['logged'] ) ) {
 <?php
 echo '<pre>';
 echo session_id();
-var_dump($_SESSION);
+var_dump( $_SESSION );
 echo '</pre>';
 ?>
 
