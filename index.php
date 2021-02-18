@@ -1,6 +1,11 @@
 <!doctype html>
 <?php
 session_start();
+if( isset( $_SESSION['logged'] ) ) {
+    if( $_SESSION['logged'] == 1 ) {
+        header( 'Location: sched.php' );
+    }
+}
 ?>
 <html lang="en">
     <head>
@@ -24,7 +29,7 @@ session_start();
         <title>A Baby Boy is Brewing!</title>
     </head>
 <body>
-    <div class="accContent container mx-auto w-50">
+    <div class="accContent container mx-auto">
         <div class="row">
             <div class="col-sm text-center my-auto">
             <img class="babyLogo" src="images/baby-brewing-2.gif">

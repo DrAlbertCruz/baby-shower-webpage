@@ -1,4 +1,5 @@
 <?php
+session_start();
 /*
  * Codes:
  *  0 - Internal error
@@ -6,15 +7,14 @@
  *  2 - Password is wrong
  */
 
-require( 'secure.php' ); // This file should have the password in it as $passcode
 if( !isset( $_POST['password'] ) ) {
     echo 0;
 }
 
-$password = $_POST['password'];
-if( strcmp( $password, $passcode ) == 0 ) {
+$correctPass = 'test';
+if( $_POST['password'] === $correctPass ) {
     $_SESSION['logged'] = 1;
-    echo var_dump($_SESSION);
+    echo 1;
 }
 else {
     echo 2;
