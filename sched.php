@@ -32,12 +32,16 @@ if( $_SESSION['logged'] != 1 ) {
 <body>
     <div class="accContent container mx-auto">
         <div class="row">
-            <div class="col-sm text-center my-auto">
+        <div class="col-sm text-center my-auto">
+            <h1>Cruz Baby Shower Program</h1>
             <img class="babyLogo" src="images/baby-brewing-2.gif">
+            <p>We are so excited to meet Baby Cruz and to celebrate his upcoming arrival with you. Due to COVID concerns, we are hosting the event entirely online. It is regrettable that we cannot see everyone in person and feel that this is the safest choice to protect baby Cruz. We still want to share our experience with friends and family.</p>
+            <p>The shower will use the Zoom app to host the event. Zoom is a video conferencing app that lets you see and talk with others. It will work on your laptop, phone, or tablet. To join a session, use the links provided on our website.</p>
+            <p>The main event is on Saturday February 20 at 3:00PM (PST). We will play games, mingle and open presents live that arrive by the date of the event. We are also hosting breakout sessions for family and friends for a chance to talk to us in smaller groups throughout the weekend. </p>
         </div>
         <div class="col-sm text-center my-auto">
-            <h1>Test Schedule</h1>
-            <p>test schedule to check if the user has logged in.</p>
+            <h3 class="accFancyForm">Friday February 19</h3>
+            <p>7:00PM - 9:00PM (PST)<br>Virtual Cocktail Reception<br><em>For friends. Fun, drinks and games. BYOB.</em><br><a href="https://csub.zoom.us/j/85994431461?pwd=ZVpqc2NEUUlEcWZHNXVqc3phL2VXZz09">https://csub.zoom.us/j/85994431461?pwd=ZVpqc2NEUUlEcWZHNXVqc3phL2VXZz09</a></p>
         </div>
     </div>
 </div>
